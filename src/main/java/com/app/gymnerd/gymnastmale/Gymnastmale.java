@@ -1,4 +1,4 @@
-package com.app.gymnerd.gymnast;
+package com.app.gymnerd.gymnastmale;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -14,7 +14,7 @@ import java.util.Date;
 @AllArgsConstructor
 @Data
 @Entity
-public class Gymnast {
+public class Gymnastmale {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
@@ -26,6 +26,7 @@ public class Gymnast {
     Date birthdate;
     String sociallinkone;
     String sociallinktwo;
+    String img;
     // height
     // active years
     // medals
