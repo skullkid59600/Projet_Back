@@ -1,12 +1,11 @@
 package com.app.gymnerd.user;
 
-import javax.persistence.*;
-
 import com.app.gymnerd.role.Role;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
