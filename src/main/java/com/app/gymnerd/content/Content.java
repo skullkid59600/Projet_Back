@@ -3,14 +3,12 @@ package com.app.gymnerd.content;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @NoArgsConstructor
 @Data
 @Entity
+@Table(name = "CONTENT")
 public class Content {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

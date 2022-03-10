@@ -3,16 +3,14 @@ package com.app.gymnerd.gymnastfemale;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Date;
 
 @NoArgsConstructor
 //@AllArgsConstructor
 @Data
 @Entity
+@Table(name = "FGYMNAST")
 public class Gymnastfemale {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
