@@ -2,7 +2,9 @@ package com.app.gymnerd.riomale;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
+@Table(name = "MRIO")
 public class Riomale {
     @Id
     @GeneratedValue

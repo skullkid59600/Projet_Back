@@ -2,7 +2,9 @@ package com.app.gymnerd.tokyofemale;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
+@Table(name = "FTOKYO")
 public class Tokyofemale {
     @Id
     @GeneratedValue
