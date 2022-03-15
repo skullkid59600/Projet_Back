@@ -1,9 +1,16 @@
 package com.app.gymnerd.riomale;
 
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+@NoArgsConstructor
+@Data
+@Entity
 @Table(name = "MRIO")
 public class Riomale {
     @Id

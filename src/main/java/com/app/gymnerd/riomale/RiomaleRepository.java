@@ -1,4 +1,6 @@
 package com.app.gymnerd.riomale;
 
-public interface RiomaleRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface RiomaleRepository extends JpaRepository<Riomale, Long> {
 }

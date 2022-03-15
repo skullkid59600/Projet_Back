@@ -1,4 +1,6 @@
 package com.app.gymnerd.pekinfemale;
 
-public interface PekinfemaleRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface PekinfemaleRepository extends JpaRepository<Pekinfemale, Long> {
 }

@@ -1,4 +1,6 @@
 package com.app.gymnerd.tokyomale;
 
-public interface TokyomaleRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface TokyomaleRepository extends JpaRepository<Tokyomale, Long> {
 }
