@@ -1,31 +1,45 @@
 package com.app.gymnerd.role;
 
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import com.app.gymnerd.user.User;
 
 import javax.persistence.*;
 
-@NoArgsConstructor
-@Data
 @Entity
 @Table(name = "ROLE")
 public class Role {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long id;
+
+    @Column(name = "user_id")
+    Long userId;
+
+    @OneToOne
+    @PrimaryKeyJoinColumn(name = "user_id")
+    User user;
+
+    @Column(name = "name")
     String name;
 
-    public Role(Long id, String name) {
-        this.id = id;
+    public Role(Long userId, User user, String name) {
+        this.userId = userId;
+        this.user = user;
         this.name = name;
     }
 
-    public Long getId() {
-        return id;
+    public Long getUserId() {
+        return userId;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setUserId(Long userId) {
+        this.userId = userId;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 
     public String getName() {

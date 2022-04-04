@@ -1,5 +1,5 @@
 -- Female gymnasts
-insert into ROLE values (1, '"ROLE_ADMIN');
+
 -- Male gymnasts
 
 -- medals
@@ -7,3 +7,6 @@ insert into ROLE values (1, '"ROLE_ADMIN');
 -- Content
 
 -- User & role
+insert into USERS(id, login, password) values (1, 'Chiara','test');
+insert into ROLE(name) values ('ROLE_ADMIN');
+insert into ROLE(name) values ('ROLE_USER');

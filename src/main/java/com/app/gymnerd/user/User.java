@@ -1,38 +1,39 @@
 package com.app.gymnerd.user;
 
 import com.app.gymnerd.role.Role;
-import lombok.Data;
-import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.List;
 
-@NoArgsConstructor
-@Data
 @Entity
 @Table(name = "USERS")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    int id;
-    String login;
-    String password;
-    @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.REMOVE}, fetch = FetchType.EAGER)
-    List<Role> roles = new ArrayList<Role>();
 
-    public User(int id, String login, String password, List<Role> roles) {
+    @Column(name = "id")
+    Long id;
+
+    @Column(name = "login")
+    String login;
+
+    @Column(name = "password")
+    String password;
+
+    @OneToOne(mappedBy = "user")
+    Role role;
+
+    public User(Long id, String login, String password, Role role) {
         this.id = id;
         this.login = login;
         this.password = password;
-        this.roles = roles;
+        this.role = role;
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -52,11 +53,11 @@ public class User {
         this.password = password;
     }
 
-    public List<Role> getRoles() {
-        return roles;
+    public Role getRole() {
+        return role;
     }
 
-    public void setRoles(List<Role> roles) {
-        this.roles = roles;
+    public void setRole(Role role) {
+        this.role = role;
     }
 }
