@@ -1,19 +1,23 @@
 package com.app.gymnerd.content;
 
-import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
 @NoArgsConstructor
-@Data
 @Entity
 @Table(name = "CONTENT")
 public class Content {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+
+    @Column(name = "id")
     private int id;
+
+    @Column(name = "text")
     private String text;
+
+    @Column(name = "title")
     private String title;
 
     public Content(int id, String text, String title) {

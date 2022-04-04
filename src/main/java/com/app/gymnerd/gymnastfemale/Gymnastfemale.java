@@ -1,28 +1,47 @@
 package com.app.gymnerd.gymnastfemale;
 
-import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.util.Date;
 
 @NoArgsConstructor
-@Data
 @Entity
 @Table(name = "FGYMNAST")
 public class Gymnastfemale {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+
+    @Column(name = "id")
     Long id;
+
+    @Column(name = "firname")
     String firstname;
+
+    @Column(name = "lastname")
     String lastname;
+
+    @Column(name = "nickname")
     String nickname;
+
+    @Column(name = "gender")
     Boolean gender;
+
+    @Column(name = "country")
     String country;
+
+    @Column(name = "birthdate")
     Date birthdate;
+
+    @Column(name = "sociallinkone")
     String sociallinkone;
+
+    @Column(name = "sociallinktwo")
     String sociallinktwo;
+
+    @Column(name = "img")
     String img;
+
     // height
     // active years
     // medals
