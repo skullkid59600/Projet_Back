@@ -1,21 +1,17 @@
 package com.app.gymnerd.riofemale;
 
-import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @NoArgsConstructor
-@Data
 @Entity
 @Table(name = "FRIO")
 public class Riofemale {
     @Id
     @GeneratedValue
 
+    @Column(name = "id")
     Long id;
 
     // Floor exercise

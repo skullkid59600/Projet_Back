@@ -1,51 +1,65 @@
 package com.app.gymnerd.pekinfemale;
 
-import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @NoArgsConstructor
-@Data
 @Entity
 @Table(name = "FPEKIN")
 public class Pekinfemale {
     @Id
     @GeneratedValue
 
+    @Column(name = "id")
     Long id;
 
     // Floor exercise
+    @Column(name = "goldenfloor")
     Boolean golden_floor;
+    @Column(name = "silverfloor")
     Boolean silver_floor;
+    @Column(name = "bronzefloor")
     Boolean bronze_floor;
 
     // vault exercise
+    @Column(name = "goldenvault")
     Boolean golden_vault;
+    @Column(name = "silvervault")
     Boolean silver_vault;
+    @Column(name = "bronzevault")
     Boolean bronze_vault;
 
     // bars exercise
+    @Column(name = "goldenbars")
     Boolean golden_bars;
+    @Column(name = "silverbars")
     Boolean silver_bars;
+    @Column(name = "bronzebars")
     Boolean bronze_bars;
 
     // beam exercise
+    @Column(name = "goldenbeam")
     Boolean golden_beam;
+    @Column(name = "silverbeam")
     Boolean silver_beam;
+    @Column(name = "bronzebeam")
     Boolean bronze_beam;
 
     // team medals
+    @Column(name = "goldenteam")
     Boolean golden_team;
+    @Column(name = "silverteam")
     Boolean silver_team;
+    @Column(name = "bronzeteam")
     Boolean bronze_team;
 
     //individual medals
+    @Column(name = "goldenindiv")
     Boolean golden_individual;
+    @Column(name = "silverindiv")
     Boolean silver_individual;
+    @Column(name = "bronzeindiv")
     Boolean bronze_individual;
 
     public Pekinfemale(Long id, Boolean golden_floor, Boolean silver_floor, Boolean bronze_floor, Boolean golden_vault, Boolean silver_vault, Boolean bronze_vault, Boolean golden_bars, Boolean silver_bars, Boolean bronze_bars, Boolean golden_beam, Boolean silver_beam, Boolean bronze_beam, Boolean golden_team, Boolean silver_team, Boolean bronze_team, Boolean golden_individual, Boolean silver_individual, Boolean bronze_individual) {
