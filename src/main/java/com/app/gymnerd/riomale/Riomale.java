@@ -1,68 +1,88 @@
 package com.app.gymnerd.riomale;
 
-import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @NoArgsConstructor
-@Data
 @Entity
 @Table(name = "MRIO")
 public class Riomale {
     @Id
     @GeneratedValue
 
+    @Column(name = "id")
     Long id;
 
     // pommelhorse exercise
+    @Column(name = "goldenpom")
     Boolean golden_pommelhorse;
+    @Column(name = "silverpom")
     Boolean silver_pommelhorse;
-    Boolean bronze_pommerhorse;
+    @Column(name = "bronzepom")
+    Boolean bronze_pommelhorse;
 
     // floor exercise
+    @Column(name = "goldenfloor")
     Boolean golden_floor;
+    @Column(name = "silverfloor")
     Boolean silver_floor;
+    @Column(name = "bronzefloor")
     Boolean bronze_floor;
 
     // bars exercise
+    @Column(name = "gbars")
     Boolean golden_bars;
+    @Column(name = "sbars")
     Boolean silver_bars;
+    @Column(name = "bbars")
     Boolean bronze_bars;
 
     // horizontal bar exercise
+    @Column(name = "ghbar")
     Boolean golden_hbar;
+    @Column(name = "shbar")
     Boolean silver_hbar;
+    @Column(name = "bhbar")
     Boolean bronze_hbar;
 
     // vault exercise
+    @Column(name = "gvault")
     Boolean golden_vault;
+    @Column(name = "svault")
     Boolean silver_vault;
+    @Column(name = "bvault")
     Boolean bronze_vault;
 
     // rings exercise
+    @Column(name = "grings")
     Boolean golden_rings;
+    @Column(name = "srings")
     Boolean silver_rings;
+    @Column(name = "brings")
     Boolean bronze_rings;
 
     // team medals
+    @Column(name = "gteam")
     Boolean golden_team;
+    @Column(name = "steam")
     Boolean silver_team;
+    @Column(name = "bteam")
     Boolean bronze_team;
 
     // individual medals
+    @Column(name = "gindiv")
     Boolean golden_individual;
+    @Column(name = "sindiv")
     Boolean silver_individual;
+    @Column(name = "bindiv")
     Boolean bronze_individual;
 
-    public Riomale(Long id, Boolean golden_pommelhorse, Boolean silver_pommelhorse, Boolean bronze_pommerhorse, Boolean golden_floor, Boolean silver_floor, Boolean bronze_floor, Boolean golden_bars, Boolean silver_bars, Boolean bronze_bars, Boolean golden_hbar, Boolean silver_hbar, Boolean bronze_hbar, Boolean golden_vault, Boolean silver_vault, Boolean bronze_vault, Boolean golden_rings, Boolean silver_rings, Boolean bronze_rings, Boolean golden_team, Boolean silver_team, Boolean bronze_team, Boolean golden_individual, Boolean silver_individual, Boolean bronze_individual) {
+    public Riomale(Long id, Boolean golden_pommelhorse, Boolean silver_pommelhorse, Boolean bronze_pommelhorse, Boolean golden_floor, Boolean silver_floor, Boolean bronze_floor, Boolean golden_bars, Boolean silver_bars, Boolean bronze_bars, Boolean golden_hbar, Boolean silver_hbar, Boolean bronze_hbar, Boolean golden_vault, Boolean silver_vault, Boolean bronze_vault, Boolean golden_rings, Boolean silver_rings, Boolean bronze_rings, Boolean golden_team, Boolean silver_team, Boolean bronze_team, Boolean golden_individual, Boolean silver_individual, Boolean bronze_individual) {
         this.id = id;
         this.golden_pommelhorse = golden_pommelhorse;
         this.silver_pommelhorse = silver_pommelhorse;
-        this.bronze_pommerhorse = bronze_pommerhorse;
+        this.bronze_pommelhorse = bronze_pommelhorse;
         this.golden_floor = golden_floor;
         this.silver_floor = silver_floor;
         this.bronze_floor = bronze_floor;
@@ -110,12 +130,12 @@ public class Riomale {
         this.silver_pommelhorse = silver_pommelhorse;
     }
 
-    public Boolean getBronze_pommerhorse() {
-        return bronze_pommerhorse;
+    public Boolean getBronze_pommelhorse() {
+        return bronze_pommelhorse;
     }
 
-    public void setBronze_pommerhorse(Boolean bronze_pommerhorse) {
-        this.bronze_pommerhorse = bronze_pommerhorse;
+    public void setBronze_pommelhorse(Boolean bronze_pommelhorse) {
+        this.bronze_pommelhorse = bronze_pommelhorse;
     }
 
     public Boolean getGolden_floor() {

@@ -1,68 +1,88 @@
 package com.app.gymnerd.pekinmale;
 
-import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @NoArgsConstructor
-@Data
 @Entity
 @Table(name = "MPEKIN")
 public class Pekinmale {
     @Id
     @GeneratedValue
 
+    @Column(name = "id")
     Long id;
 
     // pommelhorse exercise
+    @Column(name = "goldenpom")
     Boolean golden_pommelhorse;
+    @Column(name = "silverpom")
     Boolean silver_pommelhorse;
-    Boolean bronze_pommerhorse;
+    @Column(name = "bronzepom")
+    Boolean bronze_pommelhorse;
 
     // floor exercise
+    @Column(name = "goldenfloor")
     Boolean golden_floor;
+    @Column(name = "silverfloor")
     Boolean silver_floor;
+    @Column(name = "bronzefloor")
     Boolean bronze_floor;
 
     // bars exercise
+    @Column(name = "goldenbars")
     Boolean golden_bars;
+    @Column(name = "silverbars")
     Boolean silver_bars;
+    @Column(name = "bronzebars")
     Boolean bronze_bars;
 
     // horizontal bar exercise
+    @Column(name = "goldenhbar")
     Boolean golden_hbar;
+    @Column(name = "silverhbar")
     Boolean silver_hbar;
+    @Column(name = "bronzehbar")
     Boolean bronze_hbar;
 
     // vault exercise
+    @Column(name = "goldenvault")
     Boolean golden_vault;
+    @Column(name = "silvervault")
     Boolean silver_vault;
+    @Column(name = "bronzevault")
     Boolean bronze_vault;
 
     // rings exercise
+    @Column(name = "goldenrings")
     Boolean golden_rings;
+    @Column(name = "silverrings")
     Boolean silver_rings;
+    @Column(name = "bronzerings")
     Boolean bronze_rings;
 
     // team medals
+    @Column(name = "goldenteam")
     Boolean golden_team;
+    @Column(name = "silverteam")
     Boolean silver_team;
+    @Column(name = "bronzeteam")
     Boolean bronze_team;
 
     // individual medals
+    @Column(name = "goldenindiv")
     Boolean golden_individual;
+    @Column(name = "silverindiv")
     Boolean silver_individual;
+    @Column(name = "bronzeindiv")
     Boolean bronze_individual;
 
-    public Pekinmale(Long id, Boolean golden_pommelhorse, Boolean silver_pommelhorse, Boolean bronze_pommerhorse, Boolean golden_floor, Boolean silver_floor, Boolean bronze_floor, Boolean golden_bars, Boolean silver_bars, Boolean bronze_bars, Boolean golden_hbar, Boolean silver_hbar, Boolean bronze_hbar, Boolean golden_vault, Boolean silver_vault, Boolean bronze_vault, Boolean golden_rings, Boolean silver_rings, Boolean bronze_rings, Boolean golden_team, Boolean silver_team, Boolean bronze_team, Boolean golden_individual, Boolean silver_individual, Boolean bronze_individual) {
+    public Pekinmale(Long id, Boolean golden_pommelhorse, Boolean silver_pommelhorse, Boolean bronze_pommelhorse, Boolean golden_floor, Boolean silver_floor, Boolean bronze_floor, Boolean golden_bars, Boolean silver_bars, Boolean bronze_bars, Boolean golden_hbar, Boolean silver_hbar, Boolean bronze_hbar, Boolean golden_vault, Boolean silver_vault, Boolean bronze_vault, Boolean golden_rings, Boolean silver_rings, Boolean bronze_rings, Boolean golden_team, Boolean silver_team, Boolean bronze_team, Boolean golden_individual, Boolean silver_individual, Boolean bronze_individual) {
         this.id = id;
         this.golden_pommelhorse = golden_pommelhorse;
         this.silver_pommelhorse = silver_pommelhorse;
-        this.bronze_pommerhorse = bronze_pommerhorse;
+        this.bronze_pommelhorse = bronze_pommelhorse;
         this.golden_floor = golden_floor;
         this.silver_floor = silver_floor;
         this.bronze_floor = bronze_floor;
@@ -110,12 +130,12 @@ public class Pekinmale {
         this.silver_pommelhorse = silver_pommelhorse;
     }
 
-    public Boolean getBronze_pommerhorse() {
-        return bronze_pommerhorse;
+    public Boolean getBronze_pommelhorse() {
+        return bronze_pommelhorse;
     }
 
-    public void setBronze_pommerhorse(Boolean bronze_pommerhorse) {
-        this.bronze_pommerhorse = bronze_pommerhorse;
+    public void setBronze_pommelhorse(Boolean bronze_pommelhorse) {
+        this.bronze_pommelhorse = bronze_pommelhorse;
     }
 
     public Boolean getGolden_floor() {

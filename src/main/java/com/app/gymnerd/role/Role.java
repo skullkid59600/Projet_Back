@@ -1,9 +1,11 @@
 package com.app.gymnerd.role;
 
 import com.app.gymnerd.user.User;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
+@NoArgsConstructor
 @Entity
 @Table(name = "ROLE")
 public class Role {
