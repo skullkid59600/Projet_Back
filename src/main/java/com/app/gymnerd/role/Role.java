@@ -15,7 +15,7 @@ public class Role {
     @Column(name = "user_id")
     Long userId;
 
-    @OneToMany
+    @OneToOne
     @PrimaryKeyJoinColumn(name = "user_id")
     User user;
 
