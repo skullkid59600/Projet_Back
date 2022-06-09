@@ -15,7 +15,7 @@ public class Gymnastfemale {
     @Column(name = "id")
     Long id;
 
-    @Column(name = "firname")
+    @Column(name = "firstname")
     String firstname;
 
     @Column(name = "lastname")
